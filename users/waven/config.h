@@ -4,3 +4,7 @@
     #undef TAPPING_TERM
     #define TAPPING_TERM 175
 #endif
+
+#ifdef RGBLIGHT_ENABLE
+    #define RGBLIGHT_SLEEP
+#endif
