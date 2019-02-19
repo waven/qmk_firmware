@@ -5,10 +5,10 @@ bool process_record_user_waven(uint16_t keycode, keyrecord_t *record) {
     switch(keycode) {
       case M_COM:
         SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_K) SS_TAP(X_C) SS_UP(X_LCTRL));
-        return false;
+        break;
       case M_UNCOM:
         SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_K) SS_TAP(X_U) SS_UP(X_LCTRL));
-        return false;
+        break;
     }
   }
   return true;
