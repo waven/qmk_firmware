@@ -8,3 +8,5 @@
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_SLEEP
 #endif
+
+#define GRAVE_ESC_CTRL_OVERRIDE
