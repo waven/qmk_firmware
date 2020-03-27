@@ -46,9 +46,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
    * │  `  │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │█████│RESET│PRSCR│
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-   * │RTOG │RMOD │RHUI │RHUD │RSAI │RSAD │RVAI │RVAD │     │MPRV │MPLY │MNXT │     │█████│     │PAUSE|
+   * │RTOG │RMOD │RHUI │RHUD │RSAI │RSAD │RVAI │RVAD │     │     │     │MPRV │MNXT │MSTP │█████│PAUSE|
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-   * │     │     │     │     │     │     │     │     │     │     │     │     │█████│     │█████│█████│
+   * │     │     │     │     │     │     │     │     │     │     │     │     │█████│MPLY │█████│█████│
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
    * │     │█████│     │     │     │     │     │     │MUTE │     │     │     │█████│     │VOLUP│█████│
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 1: Fn layer */
   [_FL] = LAYOUT_66_ansi(
     KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,             RESET, KC_PSCR,
-    RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______,          KC_PAUS,
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+    RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, KC_MPRV, KC_MNXT, KC_MSTP,          KC_PAUS,
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_MPLY,
     _______,          _______, _______, _______, _______, _______, _______, KC_MUTE, _______, _______, _______,          _______, KC_VOLU,
     _______, _______, _______,                            _______,                            _______, _______, _______, _______, KC_VOLD, _______
   ),
@@ -87,4 +87,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,          _______, _______, KC_CAPS, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3,     KC_KP_DOT,          _______, M_UNCOM,
     _______, _______, _______,                            KC_KP_0,                            _______,     _______,   KC_NLCK, SFT_TAB, M_COM,   KC_TAB
   ),
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  return process_record_user_waven(keycode, record);
 };
