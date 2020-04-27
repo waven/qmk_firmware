@@ -36,8 +36,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,      KC_F11,    KC_F12,  _______, TD(TD_PUH),  \
         _______, _______, _______, _______, _______, _______, _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_MINUS, _______,   _______, _______, TD(TD_PDE),  \
         _______, _______, _______, _______, _______, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS,  _______,   _______, _______,              \
-        _______, _______, _______, KC_CAPS, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_DOT,   _______,   M_UNCOM, _______,              \
-        _______, _______, _______,                            KC_KP_0,                            _______,     KC_NLCK,   SFT_TAB, M_COM,   KC_TAB       \
+        _______, _______, _______, KC_CAPS, _______, _______, KC_NLCK, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_DOT,   _______,   M_UNCOM, _______,              \
+        _______, _______, _______,                            KC_KP_0,                            _______,     KC_RCTRL,  SFT_TAB, M_COM,   KC_TAB       \
   ),
 };
 
