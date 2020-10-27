@@ -9,6 +9,12 @@ bool process_record_user_waven(uint16_t keycode, keyrecord_t *record) {
       case M_UNCOM:
         SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_K) SS_TAP(X_U) SS_UP(X_LCTRL));
         break;
+      case M_REGO:
+        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_R) SS_TAP(X_KP_PLUS) SS_UP(X_LCTRL));
+        break;
+      case M_REGC:
+        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_R) SS_TAP(X_KP_MINUS) SS_UP(X_LCTRL));
+        break;
     }
   }
   return true;

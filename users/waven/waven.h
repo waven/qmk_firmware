@@ -16,6 +16,8 @@
 enum custom_keycodes {
   M_COM = SAFE_RANGE,
   M_UNCOM,
+  M_REGO,
+  M_REGC,
   NEW_SAFE_RANGE     //use NEW_SAFE_RANGE for keymap specific codes
 };
 
