@@ -1,5 +1,5 @@
 /*
-Copyright 2018 David Vonau <dvonau@waven.ch> @waven
+Copyright 2020 David Vonau <dvonau@waven.ch> @waven
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
    * │  `  │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │█████│     │TPUH │
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-   * │     │     │     │     │     │     │     │KP_7 │KP_8 │KP_9 │KP_- │     │     │     │█████│TPDE │
+   * │     │     │     │     │     │     │     │KP_7 │KP_8 │KP_9 │KP_- │M_RGO│M_RGC│     │█████│TPDE │
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
    * │     │     │     │     │     │     │     │KP_4 │KP_5 │KP_6 │KP_+ │     │█████│     │█████│█████│
    * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 2: CapsLock Fn layer */
   [_CL] = LAYOUT_66_ansi(
     KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,      KC_F11,    KC_F12,           RGB_TOG, TD(TD_PUH),
-    _______, _______, _______, _______, _______, _______, _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_PLUS,  _______,   _______, _______,          TD(TD_PDE),
+    _______, _______, _______, _______, _______, _______, _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_PLUS,  M_REGO,    M_REGC,  _______,          TD(TD_PDE),
     _______, _______, _______, _______, _______, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_MINUS, _______,            _______,
     _______,          _______, _______, KC_CAPS, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3,     KC_KP_DOT,          _______, M_UNCOM,
     _______, _______, _______,                            KC_KP_0,                            _______,     _______,   KC_NLCK, SFT_TAB, M_COM,   KC_TAB
