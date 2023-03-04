@@ -4,23 +4,23 @@ bool process_record_user_waven(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     switch(keycode) {
       case M_COM:
-        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_K) SS_TAP(X_C) SS_UP(X_LCTRL));
+        SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_K) SS_TAP(X_C) SS_UP(X_LCTL));
         break;
       case M_UNCOM:
-        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_K) SS_TAP(X_U) SS_UP(X_LCTRL));
+        SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_K) SS_TAP(X_U) SS_UP(X_LCTL));
         break;
       case M_REGO:
-        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_R) SS_TAP(X_KP_PLUS) SS_UP(X_LCTRL));
+        SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_R) SS_TAP(X_KP_PLUS) SS_UP(X_LCTL));
         break;
       case M_REGC:
-        SEND_STRING(SS_DOWN(X_LCTRL) SS_TAP(X_R) SS_TAP(X_KP_MINUS) SS_UP(X_LCTRL));
+        SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_R) SS_TAP(X_KP_MINUS) SS_UP(X_LCTL));
         break;
       case M_BUILD:
         SEND_STRING(SS_LCTL(SS_LSFT("b")));
         break;
     }
   }
-  return true;
+    return true;
 };
 
 void td_caps_finished(qk_tap_dance_state_t *state, void *user_data) {

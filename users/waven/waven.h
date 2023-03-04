@@ -2,8 +2,6 @@
 
 #include QMK_KEYBOARD_H
 
-#include "process_keycode/process_tap_dance.h"
-
 #define _DL 0
 #define _FL 1
 #define _CL 2
@@ -28,8 +26,6 @@ enum {
   TD_PUH,
   TD_PDE
 };
-
-// const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt);
 
 bool process_record_user_waven(uint16_t keycode, keyrecord_t *record);
 
