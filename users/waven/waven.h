@@ -29,5 +29,5 @@ enum {
 
 bool process_record_user_waven(uint16_t keycode, keyrecord_t *record);
 
-void td_caps_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_caps_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_caps_finished(tap_dance_state_t *state, void *user_data);
+void td_caps_reset(tap_dance_state_t *state, void *user_data);
